@@ -5,9 +5,9 @@ from rest_framework import serializers
 class ListingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Listing
-        fields = '__all__'
+        fields = ["id", 'name', 'description', 'location', 'price_per_night', 'created_at', 'updated_at']
 
 class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
-        fields = '__all__'
+        fields = ['id', 'listing', 'start_date', 'end_date', 'status', 'created_at']
