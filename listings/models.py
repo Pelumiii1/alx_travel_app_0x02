@@ -29,6 +29,7 @@ class Booking(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     status = models.CharField(max_length=50)
+    
     created_at = models.DateTimeField(auto_now_add=True)
  
 class Review(models.Model):
